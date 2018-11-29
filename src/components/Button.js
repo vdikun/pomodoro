@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   TouchableOpacity,
   Text,
-  View,
 } from 'react-native';
+import { connect } from 'react-redux';
 import styles from './../styles/common';
 
-export default Button = ({ children, onPress }) => {
+const Button = ({ children, onPress }) => {
     const { buttonStyle, buttonTextStyle } = styles;
     return (
-        <TouchableOpacity style={ buttonStyle } onPress={ onPress }>
+        <TouchableOpacity style={ buttonStyle } onPress={ () => { onPress() } }>
             <Text style={ buttonTextStyle }>
                 {children}
             </Text>
         </TouchableOpacity>
     );
 };
+
+export default connect()(Button);
