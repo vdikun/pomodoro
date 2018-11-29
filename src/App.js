@@ -26,8 +26,16 @@ const select = (state) => {
 let currentValue = null;
 
 const handleChange = () => {
-  let previousValue = currentValue;
+  let currentValue = select(store.getState());
+  if (currentValue.secondsRemaining == 0) {
+    // play sound
+    // send notification
+    // run action
+    store.dispatch(togglePomodoro());
+  }
 };
+
+const unsubscribe = store.subscribe(handleChange);
 
 const App = () => {
   return (
