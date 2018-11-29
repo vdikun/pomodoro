@@ -9,23 +9,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
-import { togglePomodoro } from './actions';
+import { StackNavigator } from 'react-navigation';
 
-import Button from './components/Button';
-import CountdownView from './components/CountdownView';
-import PomodoroContainer from './components/PomodoroContainer';
+import HomeScreen from './screens/HomeScreen';
 
 import store from './store';
 
-const App = () => {
-  return (
-   <Provider store={store}>
-    <PomodoroContainer>
-      <CountdownView store={store} />
-      <Button onPress={() => store.dispatch(togglePomodoro())} />
-    </PomodoroContainer>
-  </Provider>
-  );
-};
+const App = StackNavigator({
+	HomeScreen: { screen: HomeScreen }
+});
 
 export default App;

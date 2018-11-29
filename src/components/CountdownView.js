@@ -12,7 +12,7 @@ class CountdownView extends Component {
 
 	componentDidMount() {
 	  this._interval = setInterval(() => {
-	    this.props.store.dispatch(tick())
+	    this.props.tock()
 	  }, 1000);
 	}
 
@@ -37,4 +37,11 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(CountdownView);
+const mapDispatchToProps = (dispatch) => {
+    return { 
+        tock: () => {
+            dispatch(tick());
+        }
+    };
+
+export default connect(mapStateToProps, mapDispatchToProps)(CountdownView);

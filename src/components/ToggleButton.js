@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux';
 import styles from './../styles/common';
 
-const Button = ({ onPress, isPomodoro }) => {
+const ToggleButton = ({ onPress, isPomodoro }) => {
     const buttonText = () => {
         if (isPomodoro) {
             return "Stop pomodoro";
@@ -32,4 +32,11 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(Button);
+const mapDispatchToProps = (dispatch) => {
+    return { 
+        onPress: () => {
+            dispatch(togglePomodoro());
+        }
+    };
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToggleButton);
