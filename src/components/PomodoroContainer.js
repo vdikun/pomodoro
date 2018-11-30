@@ -6,7 +6,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import styles, { Colors } from './../styles/common';
 
-const PomodoroContainer = ({ children, isPomodoro }) => {
+export const PomodoroContainer = ({ children, isPomodoro }) => {
     const { redContainer, greenContainer } = styles;
     var containerStyle = (isPomodoro) ? redContainer : greenContainer;
     var colors = (isPomodoro) ?
