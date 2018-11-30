@@ -8,7 +8,6 @@
 
 import React from 'react';
 import { Provider } from 'react-redux';
-import { connect } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from './screens/HomeScreen';
@@ -19,4 +18,12 @@ const App = StackNavigator({
 	HomeScreen: { screen: HomeScreen }
 });
 
-export default App;
+const connectedApp = () => {
+	return (
+		<Provider store={store}>
+			<App />
+		</Provider>
+	);
+}
+
+export default connectedApp;

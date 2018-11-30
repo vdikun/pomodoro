@@ -38,10 +38,11 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return { 
-        tock: () => {
-            dispatch(tick());
-        }
-    };
+	return { 
+			tock: () => {
+					dispatch(tick());
+			}
+	};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(CountdownView);
