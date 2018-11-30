@@ -39,11 +39,6 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		96DAC702237346549A22BBFB /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B7BC65B85140B78CAA786A /* libBVLinearGradient.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		CE701F8D21B00EA500462162 /* Robot_blip-Marianne_Gagnon-120342607.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE701F8821B00EA400462162 /* Robot_blip-Marianne_Gagnon-120342607.mp3 */; };
-		CE701F8E21B00EA500462162 /* Short Dial Tone-SoundBible.com-1911037576.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE701F8921B00EA400462162 /* Short Dial Tone-SoundBible.com-1911037576.mp3 */; };
-		CE701F8F21B00EA500462162 /* Robot_blip_2-Marianne_Gagnon-299056732.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE701F8A21B00EA400462162 /* Robot_blip_2-Marianne_Gagnon-299056732.mp3 */; };
-		CE701F9021B00EA500462162 /* Store_Door_Chime-Mike_Koenig-570742973.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE701F8B21B00EA500462162 /* Store_Door_Chime-Mike_Koenig-570742973.mp3 */; };
-		CE701F9121B00EA500462162 /* Ting-Popup_Pixels-349896185.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE701F8C21B00EA500462162 /* Ting-Popup_Pixels-349896185.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,11 +360,6 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		BD483DDBC8C748448B32B748 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
-		CE701F8821B00EA400462162 /* Robot_blip-Marianne_Gagnon-120342607.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Robot_blip-Marianne_Gagnon-120342607.mp3"; path = "../../Downloads/Robot_blip-Marianne_Gagnon-120342607.mp3"; sourceTree = "<group>"; };
-		CE701F8921B00EA400462162 /* Short Dial Tone-SoundBible.com-1911037576.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Short Dial Tone-SoundBible.com-1911037576.mp3"; path = "../../Downloads/Short Dial Tone-SoundBible.com-1911037576.mp3"; sourceTree = "<group>"; };
-		CE701F8A21B00EA400462162 /* Robot_blip_2-Marianne_Gagnon-299056732.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Robot_blip_2-Marianne_Gagnon-299056732.mp3"; path = "../../Downloads/Robot_blip_2-Marianne_Gagnon-299056732.mp3"; sourceTree = "<group>"; };
-		CE701F8B21B00EA500462162 /* Store_Door_Chime-Mike_Koenig-570742973.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Store_Door_Chime-Mike_Koenig-570742973.mp3"; path = "../../Downloads/Store_Door_Chime-Mike_Koenig-570742973.mp3"; sourceTree = "<group>"; };
-		CE701F8C21B00EA500462162 /* Ting-Popup_Pixels-349896185.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ting-Popup_Pixels-349896185.mp3"; path = "../../Downloads/Ting-Popup_Pixels-349896185.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,11 +499,6 @@
 		13B07FAE1A68108700A75B9A /* pomodoro */ = {
 			isa = PBXGroup;
 			children = (
-				CE701F8A21B00EA400462162 /* Robot_blip_2-Marianne_Gagnon-299056732.mp3 */,
-				CE701F8821B00EA400462162 /* Robot_blip-Marianne_Gagnon-120342607.mp3 */,
-				CE701F8921B00EA400462162 /* Short Dial Tone-SoundBible.com-1911037576.mp3 */,
-				CE701F8B21B00EA500462162 /* Store_Door_Chime-Mike_Koenig-570742973.mp3 */,
-				CE701F8C21B00EA500462162 /* Ting-Popup_Pixels-349896185.mp3 */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1117,13 +1102,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE701F8D21B00EA500462162 /* Robot_blip-Marianne_Gagnon-120342607.mp3 in Resources */,
-				CE701F8E21B00EA500462162 /* Short Dial Tone-SoundBible.com-1911037576.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				CE701F8F21B00EA500462162 /* Robot_blip_2-Marianne_Gagnon-299056732.mp3 in Resources */,
-				CE701F9121B00EA500462162 /* Ting-Popup_Pixels-349896185.mp3 in Resources */,
-				CE701F9021B00EA500462162 /* Store_Door_Chime-Mike_Koenig-570742973.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
