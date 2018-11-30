@@ -19,7 +19,9 @@
   "devDependencies": {
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
+    "jest-runner-prettier": "^0.2.6",
     "metro-react-native-babel-preset": "^0.49.2",
+    "prettier": "^1.15.3",
     "react-test-renderer": "16.6.1"
   },
   "jest": {
