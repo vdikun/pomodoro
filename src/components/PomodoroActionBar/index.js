@@ -8,22 +8,17 @@ import pomodoroState from '../../reducers/state';
 import styles from './styles';
 
 const PomodoroActionBar = ({ theState }) => {
-
-    if (theState == pomodoroState.DISABLED) {
-        return (
-            <View style={styles.controlStyle}>
-                <StartControl />
-            </View>
-        );
-    } else {
-        return (
-            <View style={styles.controlStyle}>
-                <StartControl />
+    return (
+        <View style={styles.controlStyle}>
+            <StartControl />
+            {(theState == pomodoroState.DISABLED)?
+              null :
+              <View style={styles.controlStyle}>
                 <ToggleControl />
                 <PauseControl />
-            </View>
-        );
-    }
+              </View>}
+        </View>
+    );
 };
 
 const mapStateToProps = (state) => {
