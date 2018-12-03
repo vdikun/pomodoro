@@ -3,7 +3,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import styles from './../styles/common';
+import styles from './../styles/components/SettingsButton.style';
 
 const settingsIcon = './../../img/settings-18dp.png';
 

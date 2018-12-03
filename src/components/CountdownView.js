@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux';
 import { tick } from './../actions';
 import Timer from './Timer';
-import styles from './../styles/common';
+import styles from './../styles/components/Timer.style';
 
 class CountdownView extends Component {
 
