@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startPomodoro, stopPomodoro } from './../actions';
-import Button from './Button';
+import ControlIcon from './ControlIcon';
 import pomodoroState from './../reducers/state';
 
 const StartButton = ({ theState, startFn, stopFn }) => {
-    let buttonText = (theState == pomodoroState.DISABLED) ? "Start Pomodoro" : "Stop Pomodoro";
+    let iconName = (theState == pomodoroState.DISABLED) ? "play-circle" : "stop-circle";
     let onPress = (theState == pomodoroState.DISABLED) ? startFn : stopFn;
     return (
-        <Button text={ buttonText } onPress={() => onPress()} />
+        <ControlIcon iconName={iconName} onPress={() => onPress()} />
     );
 };
 

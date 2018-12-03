@@ -1,5 +1,7 @@
 export default styles = {
     controlStyle: {
-        alignSelf: 'stretch'
+        alignSelf: 'stretch',
+        flexDirection: 'row',
+        justifyContent: 'center'
     }
   };

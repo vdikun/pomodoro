@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleTimer } from './../actions';
-import Button from './Button';
+import ControlIcon from './ControlIcon';
 
 const PauseButton = ({ isTimerActive, onPress }) => {
-    let buttonText = (isTimerActive) ? "Pause Timer" : "Start Timer";
+    //let buttonText = (isTimerActive) ? "Pause Timer" : "Start Timer";
+    let iconName = (isTimerActive) ? "pause-circle" : "play-circle";
     return (
-        <Button text={buttonText} onPress={() => onPress()} />
+        <ControlIcon iconName={iconName} onPress={() => onPress()} />
     );
 };
 

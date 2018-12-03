@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import PomodoroControl from './../components/PomodoroControl';
 import CountdownView from './../components/CountdownView';
 import SettingsButton from './../components/SettingsButton';
-import pomodoroState from './../reducers/state';
+import pomodoroState from '../reducers/state';
 
 import styles, { Colors } from './../styles/common';
 
