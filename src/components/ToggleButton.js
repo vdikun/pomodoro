@@ -6,9 +6,9 @@ import Button from './Button';
 const ToggleButton = ({ onPress, isPomodoro }) => {
     let buttonText;
     if (isPomodoro) {
-        buttonText = "Stop pomodoro";
+        buttonText = "Start Break";
     } else {
-        buttonText = "Pomodoro";
+        buttonText = "Start Pomodoro";
     }
 
     return (
