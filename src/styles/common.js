@@ -9,6 +9,10 @@ export const Colors = {
     black: '#000'
 }
 
+export const Values = {
+    SPACING: 10
+}
+
 const defaultContainer = {
     flex: 1,
     justifyContent: 'center',

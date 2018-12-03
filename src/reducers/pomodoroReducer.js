@@ -1,10 +1,5 @@
 import { Actions } from '../actions';
-
-const pomodoroState = {
-    DISABLED: 'DISABLED',
-    WORK: 'WORK',
-    BREAK: 'BREAK'
-}
+import pomodoroState from './state';
 
 const initialState = {
     isPomodoro: false,
@@ -15,27 +10,46 @@ const initialState = {
     activeTimer: false
 }
 
+const toggleWorkOrBreak = (state) => {
+    if (state.pomodoroState == pomodoroState.WORK) {
+        return {
+            pomodoroState: pomodoroState.BREAK,
+            secondsRemaining: state.breakSeconds
+        }
+    } else {
+        return {
+            pomodoroState: pomodoroState.WORK,
+            secondsRemaining: state.workSeconds
+        }  
+    }
+}
+
 export default pomodoroReducer = (state = initialState, action) => {
     switch (action.type) {
         case Actions.TOGGLE_POMODORO:
-            const isPomodoro = !(state.isPomodoro);
             return {
                 ...state,
-                isPomodoro: isPomodoro,
-                secondsRemaining: (isPomodoro)? state.workSeconds : state.breakSeconds,
+                ...toggleWorkOrBreak(state),
+                activeTimer: true
+            };
+        case Actions.START_POMODORO:
+            return {
+                ...state,
+                pomodoroState: pomodoroState.WORK,
+                secondsRemaining: state.workSeconds,
                 activeTimer: true
             };
         case Actions.TICK:
             const secondsRemaining = state.secondsRemaining;
             if (secondsRemaining <= 0) {
                 return {
-                    ...state
+                    ...state,
+                    ...toggleWorkOrBreak(state)
                 };
             } else {
                 return {
                     ...state,
-                    isPomodoro: state.isPomodoro,
-                    secondsRemaining: state.secondsRemaining - 1
+                    secondsRemaining: secondsRemaining - 1
                 };
             }
         default:

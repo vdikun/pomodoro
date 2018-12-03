@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { togglePomodoro } from './../actions';
 import Button from './Button';
 
-const ToggleButton = ({ onPress, isPomodoro }) => {
+import pomodoroState from './../reducers/state';
+
+const ToggleButton = ({ onPress, isBreakTime }) => {
     let buttonText;
-    if (isPomodoro) {
+    if (!isBreakTime) {
         buttonText = "Start Break";
     } else {
-        buttonText = "Start Pomodoro";
+        buttonText = "End Break";
     }
 
     return (
@@ -18,7 +20,7 @@ const ToggleButton = ({ onPress, isPomodoro }) => {
 
 const mapStateToProps = (state) => {
   return {
-    isPomodoro: state.pomodoro.isPomodoro
+    isBreakTime: (state.pomodoro.pomodoroState == pomodoroState.BREAK)
   }
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
 import { connect } from 'react-redux';
 import LinearGradient from 'react-native-linear-gradient';
 
-import ToggleButton from './../components/ToggleButton';
+import PomodoroControl from './../components/PomodoroControl';
 import CountdownView from './../components/CountdownView';
 import SettingsButton from './../components/SettingsButton';
+import pomodoroState from './../reducers/state';
 
 import styles, { Colors } from './../styles/common';
 
@@ -19,7 +19,7 @@ export const HomeScreen = ({ isPomodoro, navigation }) => {
 	return (
 			<LinearGradient colors={colors} style={ containerStyle }>
 				<CountdownView />
-				<ToggleButton />
+				<PomodoroControl />
 				<SettingsButton onPress={() => navigateToSettings()} />
 			</LinearGradient>
 	);
@@ -27,7 +27,7 @@ export const HomeScreen = ({ isPomodoro, navigation }) => {
 
 const mapStateToProps = (state) => {
   return {
-  	isPomodoro: state.pomodoro.isPomodoro
+  	isPomodoro: !(state.pomodoro.pomodoroState == pomodoroState.BREAK)
   }
 };
 
