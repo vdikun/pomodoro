@@ -5,14 +5,11 @@ import Button from './Button';
 
 import pomodoroState from './../reducers/state';
 
-const ToggleButton = ({ onPress, isBreakTime }) => {
-    let buttonText;
-    if (!isBreakTime) {
-        buttonText = "Start Break";
-    } else {
-        buttonText = "End Break";
+const ToggleButton = ({ onPress, theState }) => {
+    if (theState == pomodoroState.DISABLED) {
+        return null;
     }
-
+    let buttonText = (theState == pomodoroState.WORK)? "Start Break" : "End Break";
     return (
         <Button text={buttonText} onPress={() => onPress()} />
     );
@@ -20,7 +17,7 @@ const ToggleButton = ({ onPress, isBreakTime }) => {
 
 const mapStateToProps = (state) => {
   return {
-    isBreakTime: (state.pomodoro.pomodoroState == pomodoroState.BREAK)
+    theState: state.pomodoro.pomodoroState
   }
 };
 

@@ -26,9 +26,9 @@ class CountdownView extends Component {
 
 	render() {
 		const { activeTimer, secondsRemaining } = this.props;
+    	const { timerStyle } = styles;
 		if (activeTimer) {
 			this.startTimer();
-    	const { timerStyle } = styles;
     	return (
 	    	<Text style={ timerStyle }>
 	        	{ Timer.showTimerText(secondsRemaining) }
@@ -36,6 +36,13 @@ class CountdownView extends Component {
     	);
 		} else {
 			this.stopTimer();
+			if (secondsRemaining > -1) {
+				return (
+					<Text style={ timerStyle }>
+						{ Timer.showTimerText(secondsRemaining) }
+					</Text>
+				);	
+			}
 			return null;
 		}
 	}
@@ -50,9 +57,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return { 
-			tock: () => {
-					dispatch(tick());
-			}
+		tock: () => {
+			dispatch(tick());
+		}
 	};
 }
 
