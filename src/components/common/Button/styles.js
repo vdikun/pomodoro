@@ -1,4 +1,4 @@
-import { Colors } from './../common';
+import { Colors } from './../../styles';
 
 const SPACING = 10;
 

@@ -3,9 +3,9 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import styles from './../styles/components/SettingsButton.style';
+import styles from './styles';
 
-const settingsIcon = './../../img/settings-18dp.png';
+const settingsIcon = './../../../../img/settings-18dp.png';
 
 const SettingsButton = ({ onPress }) => {
     return (

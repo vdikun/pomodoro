@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { togglePomodoro } from './../actions';
-import ControlIcon from './ControlIcon';
+import { togglePomodoro } from '../../actions';
+import ResponsiveIcon from '../common/ResponsiveIcon';
 
-import pomodoroState from './../reducers/state';
+import pomodoroState from '../../reducers/state';
 
 const ToggleButton = ({ onPress, theState }) => {
     if (theState == pomodoroState.DISABLED) {
@@ -12,7 +12,7 @@ const ToggleButton = ({ onPress, theState }) => {
     //let buttonText = (theState == pomodoroState.WORK)? "Start Break" : "End Break";
     let iconName = "chevron-circle-right"; 
     return (
-        <ControlIcon iconName={iconName} onPress={() => onPress()} />
+        <ResponsiveIcon iconName={iconName} onPress={() => onPress()} />
     );
 };
 

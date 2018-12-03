@@ -5,8 +5,8 @@ import {
   View
 } from 'react-native';
 import NumericInput from 'react-native-numeric-input';
-import styles from './../styles/common';
-import Button from './../components/Button'
+import styles from './../styles';
+import Button from './../common/Button'
 
 class SettingsScreen extends Component {
 	render() {

@@ -1,12 +1,7 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import styles, { Black } from './../styles/components/ControlIcon.style';
-
-style = {
-    opacity: 0.7,
-    margin: 5
-}
+import styles, { Black } from './styles';
 
 const ControlIcon = ({ iconName, onPress }) => {
     return (

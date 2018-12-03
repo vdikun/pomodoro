@@ -3,9 +3,9 @@ import {
   Text,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { tick } from './../actions';
-import Timer from './Timer';
-import styles from './../styles/components/Timer.style';
+import { tick } from './../../actions';
+import Timer from './../../utils/timer';
+import styles from './styles';
 
 class CountdownView extends Component {
 

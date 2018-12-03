@@ -10,8 +10,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
 
-import HomeScreen from './screens/HomeScreen';
-import SettingsScreen from './screens/SettingsScreen';
+import HomeScreen from './components/screens/HomeScreen';
+import SettingsScreen from './components/screens/SettingsScreen';
 
 import store from './store';
 

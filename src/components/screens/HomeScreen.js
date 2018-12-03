@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import LinearGradient from 'react-native-linear-gradient';
 
-import PomodoroControl from './../components/PomodoroControl';
-import CountdownView from './../components/CountdownView';
-import SettingsButton from './../components/SettingsButton';
-import pomodoroState from '../reducers/state';
+import PomodoroActionBar from '../PomodoroActionBar';
+import TimerView from '../TimerView';
+import SettingsControl from '../controls/SettingsControl';
+import pomodoroState from '../../reducers/state';
 
-import styles, { Colors } from './../styles/common';
+import styles, { Colors } from './../styles';
 
 export const HomeScreen = ({ isPomodoro, navigation }) => {
 	const { redContainer, greenContainer } = styles;
@@ -18,9 +18,9 @@ export const HomeScreen = ({ isPomodoro, navigation }) => {
 		[ Colors.greenMajor, Colors.greenMinor ];
 	return (
 			<LinearGradient colors={colors} style={ containerStyle }>
-				<CountdownView />
-				<PomodoroControl />
-				<SettingsButton onPress={() => navigateToSettings()} />
+				<TimerView />
+				<PomodoroActionBar />
+				<SettingsControl onPress={() => navigateToSettings()} />
 			</LinearGradient>
 	);
 };
