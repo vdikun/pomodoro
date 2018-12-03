@@ -2,7 +2,8 @@ export const Colors = {
     redMajor: '#FF5733',
     redMinor: '#D41111',
     greenMajor: '#DAF7A6',
-    greenMinor: '#8BD21D'
+    greenMinor: '#8BD21D',
+    offWhite: '#dddfff'
 }
 
 const container = {
@@ -20,6 +21,10 @@ export default styles = {
     greenContainer: {
         ...container,
         backgroundColor: Colors.greenMajor
+    },
+    settingsContainer: {
+        ...container,
+        backgroundColor: Colors.offWhite
     },
     buttonStyle: {
         backgroundColor: '#fff',

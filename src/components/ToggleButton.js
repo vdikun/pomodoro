@@ -1,29 +1,18 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  Text,
-} from 'react-native';
 import { connect } from 'react-redux';
 import { togglePomodoro } from './../actions';
-import styles from './../styles/common';
+import Button from './Button';
 
 const ToggleButton = ({ onPress, isPomodoro }) => {
-    const buttonText = () => {
-        if (isPomodoro) {
-            return "Stop pomodoro";
-        } else {
-            return "Pomodoro";
-        }
-    };
-
-    const { buttonStyle, buttonTextStyle } = styles;
+    let buttonText;
+    if (isPomodoro) {
+        buttonText = "Stop pomodoro";
+    } else {
+        buttonText = "Pomodoro";
+    }
 
     return (
-        <TouchableOpacity style={ buttonStyle } onPress={ () => { onPress() } }>
-            <Text style={ buttonTextStyle }>
-                {buttonText()}
-            </Text>
-        </TouchableOpacity>
+        <Button text={buttonText} onPress={() => onPress()} />
     );
 };
 
