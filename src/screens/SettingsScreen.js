@@ -4,6 +4,7 @@ import {
   TextInput,
   View
 } from 'react-native';
+import NumericInput from 'react-native-numeric-input';
 import styles from './../styles/common';
 import Button from './../components/Button'
 
@@ -14,9 +15,10 @@ class SettingsScreen extends Component {
           <Text>
               Hello world!
           </Text>
-          <TextInput>
+          <TextInput style={styles.textInput}>
               Hello world!
           </TextInput>
+          <NumericInput type='up-down' value={10} />
           <Button text={"Save settings"} />
       </View>
 	  );
