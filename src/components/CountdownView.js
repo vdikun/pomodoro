@@ -31,7 +31,7 @@ class CountdownView extends Component {
 			this.startTimer();
     	return (
 	    	<Text style={ timerStyle }>
-	        	{ Timer.showTimerText(secondsRemaining) }
+	        	{ Timer.getTimerText(secondsRemaining) }
 	        </Text>
     	);
 		} else {
@@ -39,7 +39,7 @@ class CountdownView extends Component {
 			if (secondsRemaining > -1) {
 				return (
 					<Text style={ timerStyle }>
-						{ Timer.showTimerText(secondsRemaining) }
+						{ Timer.getTimerText(secondsRemaining) }
 					</Text>
 				);	
 			}

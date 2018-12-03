@@ -6,7 +6,7 @@ const getSecondsRemaining = (seconds) => {
 	return seconds - (getMinutesRemaining(seconds) * 60);
 };
 
-const showTimerText = (secondsRemaining) => {
+const getTimerText = (secondsRemaining) => {
 	if (secondsRemaining < 0) {
 		return "";
 	}
@@ -22,5 +22,5 @@ const showTimerText = (secondsRemaining) => {
 };
 
 export default Timer = {
-  showTimerText
+  getTimerText
 }
