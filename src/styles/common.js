@@ -4,16 +4,17 @@ export const Colors = {
     greenMajor: '#DAF7A6',
     greenMinor: '#8BD21D',
     offWhite: '#dddfff',
+    offGrey: '#444111',
     white: '#fff',
     black: '#000'
 }
 
-export const defaultContainer = {
+const defaultContainer = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  };
+    backgroundColor: Colors.offWhite,
+};
 
 export default styles = {
     redContainer: {
@@ -25,7 +26,13 @@ export default styles = {
         backgroundColor: Colors.greenMajor
     },
     settingsContainer: {
-        ...defaultContainer,
-        backgroundColor: Colors.offWhite
+        ...defaultContainer
+    },
+    textInput: {
+        margin: 15,
+        height: 40,
+        borderColor: Colors.offGrey,
+        backgroundColor: Colors.white,
+        borderWidth: 1
     }
   };
