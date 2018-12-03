@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { toggleTimer } from '../../actions';
-import ResponsiveIcon from '../common/ResponsiveIcon';
+import ResponsiveIcon, { iconNames } from '../common/ResponsiveIcon';
 
 const PauseButton = ({ isTimerActive, onPress }) => {
-    //let buttonText = (isTimerActive) ? "Pause Timer" : "Start Timer";
-    let iconName = (isTimerActive) ? "pause-circle" : "play-circle";
+    let iconName = (isTimerActive) ? iconNames.PAUSE : iconNames.START;
     return (
         <ResponsiveIcon iconName={iconName} onPress={() => onPress()} />
     );
