@@ -11,11 +11,13 @@ import { Provider } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from './screens/HomeScreen';
+import SettingsScreen from './screens/SettingsScreen';
 
 import store from './store';
 
 const App = StackNavigator({
-	HomeScreen: { screen: HomeScreen }
+	Home: { screen: HomeScreen },
+	Settings: { screen: SettingsScreen }
 });
 
 const connectedApp = () => {
