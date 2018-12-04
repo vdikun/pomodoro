@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import {
-  Text,
-} from 'react-native';
+import { Text } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { connect } from 'react-redux';
 import { tick } from './../../redux/actions';
 import Timer from './../../utils/timer';
 import styles from './styles';
 
-class CountdownView extends Component {
+class TimerView extends Component {
 
 	startTimer() {
 		if (!this._interval) {
@@ -24,24 +23,33 @@ class CountdownView extends Component {
 		}
 	}
 
+	renderActiveTimer(secondsRemaining) {
+		const { timerStyle } = styles;
+		return (
+			<Text style={ timerStyle }>
+				{ Timer.getTimerText(secondsRemaining) }
+			</Text>
+		);
+	}
+
+	renderPausedTimer(secondsRemaining) {
+		const { timerStyle } = styles;
+		return (
+			<Animatable.Text animation="fadeIn" iterationCount={"infinite"} direction="alternate" duration={500} style={ timerStyle }>
+				{ Timer.getTimerText(secondsRemaining) }
+			</Animatable.Text>
+		);
+	}
+
 	render() {
 		const { activeTimer, secondsRemaining } = this.props;
-    	const { timerStyle } = styles;
 		if (activeTimer) {
 			this.startTimer();
-    	return (
-	    	<Text style={ timerStyle }>
-	        	{ Timer.getTimerText(secondsRemaining) }
-	        </Text>
-    	);
+    		return this.renderActiveTimer(secondsRemaining);
 		} else {
 			this.stopTimer();
 			if (secondsRemaining > -1) {
-				return (
-					<Text style={ timerStyle }>
-						{ Timer.getTimerText(secondsRemaining) }
-					</Text>
-				);	
+				return this.renderPausedTimer(secondsRemaining);	
 			}
 			return null;
 		}
@@ -63,4 +71,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CountdownView);
+export default connect(mapStateToProps, mapDispatchToProps)(TimerView);
