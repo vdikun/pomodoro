@@ -20,7 +20,12 @@ export default pomodoroReducer = (state = initialState, action) => {
             return {
                 ...initialState
             };
-            case Actions.TICK:
+        case Actions.TOGGLE_TIMER:
+            return {
+                ...state,
+                activeTimer: !state.activeTimer
+            };
+        case Actions.TICK:
             const secondsRemaining = state.secondsRemaining;
             if (secondsRemaining <= 0) {
                 return {
@@ -32,11 +37,6 @@ export default pomodoroReducer = (state = initialState, action) => {
                     ...state,
                     secondsRemaining: secondsRemaining - 1
                 };
-            };
-        case Actions.TOGGLE_TIMER:
-            return {
-                ...state,
-                activeTimer: !state.activeTimer
             };
         default:
             return state;
