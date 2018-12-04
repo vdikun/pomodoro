@@ -1,6 +1,5 @@
-import { Actions } from '../actions';
-import pomodoroState, { initialState } from './state';
-import { toggleWorkOrBreak } from './common';
+import Actions from './../actions/Actions';
+import pomodoroState, { initialState, toggleWorkOrBreak } from '../state';
 
 export default pomodoroReducer = (state = initialState, action) => {
     switch (action.type) {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import StartControl from '../controls/StartControl';
 import ToggleControl from '../controls/ToggleControl';
 import PauseControl from '../controls/PauseControl';
-import pomodoroState from '../../reducers/state';
+import pomodoroState from '../../redux/state';
 import styles from './styles';
 
 const PomodoroActionBar = ({ theState }) => {

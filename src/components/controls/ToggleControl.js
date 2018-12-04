@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { togglePomodoro } from '../../actions';
+import { togglePomodoro } from './../../redux/actions';
 import ResponsiveIcon, { iconNames } from '../common/ResponsiveIcon';
 
-import pomodoroState from '../../reducers/state';
+import pomodoroState from './../../redux/state';
 
 const ToggleButton = ({ onPress, theState }) => {
     if (theState == pomodoroState.DISABLED) {

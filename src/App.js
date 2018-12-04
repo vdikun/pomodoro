@@ -13,7 +13,7 @@ import { StackNavigator } from 'react-navigation';
 import HomeScreen from './components/screens/HomeScreen';
 import SettingsScreen from './components/screens/SettingsScreen';
 
-import store from './store';
+import store from './redux/store';
 
 const App = StackNavigator({
 	Home: { screen: HomeScreen },

@@ -5,7 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import PomodoroActionBar from '../PomodoroActionBar';
 import TimerView from '../TimerView';
 import SettingsControl from '../controls/SettingsControl';
-import pomodoroState from '../../reducers/state';
+import pomodoroState from '../../redux/state';
 
 import styles, { Colors } from './../styles';
 

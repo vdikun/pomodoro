@@ -3,7 +3,7 @@ import {
   Text,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { tick } from './../../actions';
+import { tick } from './../../redux/actions';
 import Timer from './../../utils/timer';
 import styles from './styles';
 

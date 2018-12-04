@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleTimer } from '../../actions';
+import { toggleTimer } from './../../redux/actions';
 import ResponsiveIcon, { iconNames } from '../common/ResponsiveIcon';
 
 const PauseButton = ({ isTimerActive, onPress }) => {
