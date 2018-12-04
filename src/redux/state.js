@@ -12,7 +12,8 @@ export const initialState = {
     secondsRemaining: -1,
     workSeconds: DEF_WORK_MINS * 60,
     breakSeconds: DEF_BREAK_MINS * 60,
-    activeTimer: false
+    activeTimer: false,
+    showSettings: false
 }
 
 export const toggleWorkOrBreak = (state) => {

@@ -29,3 +29,9 @@ export const toggleTimer = () => {
         type: Actions.TOGGLE_TIMER
     }
 };
+
+export const toggleSettings = () => {
+    return {
+        type: Actions.TOGGLE_SETTINGS
+    }
+}

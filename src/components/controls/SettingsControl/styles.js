@@ -3,7 +3,7 @@ export default styles = {
         height: 50,
         width: 50
     },
-    settingsButton: {
+    settingsIconContainer: {
         position: 'absolute',
         top: 0,
         bottom: 0,

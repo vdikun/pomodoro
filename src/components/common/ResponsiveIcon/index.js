@@ -7,7 +7,8 @@ export const iconNames = {
     START: "play-circle",
     STOP: "stop-circle",
     PAUSE: "pause-circle",
-    TOGGLE: "chevron-circle-right"    
+    TOGGLE: "chevron-circle-right",
+    SETTINGS: "cog"
 }
 
 const ControlIcon = ({ iconName, onPress }) => {

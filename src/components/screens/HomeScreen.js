@@ -11,7 +11,6 @@ import styles, { Colors } from './../styles';
 
 export const HomeScreen = ({ isPomodoro, navigation }) => {
 	const { redContainer, greenContainer } = styles;
-	const navigateToSettings = () => navigation.navigate('Settings');
 	var containerStyle = (isPomodoro) ? redContainer : greenContainer;
 	var colors = (isPomodoro) ?
 		[ Colors.redMajor, Colors.redMinor ] :
@@ -20,7 +19,7 @@ export const HomeScreen = ({ isPomodoro, navigation }) => {
 			<LinearGradient colors={colors} style={ containerStyle }>
 				<TimerView />
 				<PomodoroActionBar />
-				<SettingsControl onPress={() => navigateToSettings()} />
+				<SettingsControl />
 			</LinearGradient>
 	);
 };
