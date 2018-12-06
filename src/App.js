@@ -8,9 +8,7 @@
 
 import React from 'react';
 import { Provider } from 'react-redux';
-
 import HomeScreen from './components/screens/HomeScreen';
-
 import store from './redux/store';
 
 const connectedApp = () => {

@@ -9,7 +9,7 @@ import pomodoroState from '../../redux/state';
 
 import styles, { Colors } from './../styles';
 
-export const HomeScreen = ({ isPomodoro, navigation }) => {
+export const HomeScreen = ({ isPomodoro }) => {
 	const { redContainer, greenContainer } = styles;
 	var containerStyle = (isPomodoro) ? redContainer : greenContainer;
 	var colors = (isPomodoro) ?

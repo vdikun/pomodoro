@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { toggleTimer } from './../../redux/actions';
 import ResponsiveIcon, { iconNames } from '../common/ResponsiveIcon';
 
-const PauseButton = ({ isTimerActive, onPress }) => {
+export const PauseControl = ({ isTimerActive, onPress }) => {
     let iconName = (isTimerActive) ? iconNames.PAUSE : iconNames.START;
     return (
         <ResponsiveIcon iconName={iconName} onPress={() => onPress()} />
@@ -24,4 +24,4 @@ const mapStateToProps = (state) => {
       }
   };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PauseButton);
+export default connect(mapStateToProps, mapDispatchToProps)(PauseControl);
