@@ -2,7 +2,7 @@ export const Colors = {
     redMajor: '#FF5733',
     redMinor: '#D41111',
     greenMajor: '#DAF7A6',
-    greenMinor: '#8BD21D',
+    greenMinor: '#7CC112',
     offWhite: '#dddfff',
     offGrey: '#444111',
     white: '#fff',
