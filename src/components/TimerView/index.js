@@ -4,21 +4,23 @@ import * as Animatable from 'react-native-animatable';
 import { connect } from 'react-redux';
 import { tick } from './../../redux/actions';
 import Timer from './../../utils/timer';
+import BackgroundTimer from 'react-native-background-timer';
 import styles from './styles';
 
 class TimerView extends Component {
 
 	startTimer() {
 		if (!this._interval) {
-			this._interval = setInterval(() => {
+			BackgroundTimer.runBackgroundTimer(() => { 
 				this.props.tock()
 			}, 1000);
+			this._interval = true;
 		}
 	}
 
 	stopTimer() {
 		if (this._interval) {
-			clearInterval(this._interval);
+			BackgroundTimer.stopBackgroundTimer();
 			this._interval = null;
 		}
 	}
