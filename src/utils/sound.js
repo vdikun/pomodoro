@@ -17,4 +17,3 @@ const ting = makeSound('Ting.mp3');
 const blop = makeSound('Blip.mp3');
 
 export default Sounds = { ting, blop };
-

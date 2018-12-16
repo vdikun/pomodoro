@@ -1,10 +1,15 @@
 import { createStore } from 'redux';
+import { AppState } from 'react-native';
 import reducers from './../reducers';
 import { togglePomodoro } from './../actions';
 import Sounds from './../../utils/sound';
 import pomodoroState from '../state';
 
+import NotificationService from '../../notificationService';
+
 const { ting, blop } = Sounds;
+
+const { popNotif } = NotificationService;
 
 export default store = createStore(reducers);
 
@@ -12,13 +17,19 @@ const handleChange = () => {
   let currentValue = store.getState();
   let pomodoro = currentValue.pomodoro;
   if (pomodoro.secondsRemaining == 0) {
-    // play sound
-    let sound;
+    let sound, message;
     if (pomodoro.pomodoroState == pomodoroState.WORK) {
       sound = ting;
+      message = "Break time!"
     } else {
       sound = blop;
+      message = "Back to work!"
     }
+    if (AppState.currentState.match(/inactive|background/)) {
+      // show notification
+      popNotif(message);
+    }
+    // play sound
     sound.play((success) => {
       if (success) {
         console.log('successfully finished playing');
