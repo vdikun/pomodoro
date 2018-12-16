@@ -6,33 +6,23 @@ import ResponsiveIcon, { iconNames } from '../../common/ResponsiveIcon';
 import { toggleSettings } from './../../../redux/actions';
 import SettingsModal from './../../SettingsModal';
 
-const SettingsControl = ({ onOpen, onClose }) => {
+const SettingsControl = ({ onPress }) => {
     return (
         <View style={styles.settingsIconContainer}>
             <View style={styles.settingsIconContainer}>
-                <ResponsiveIcon iconName={iconNames.SETTINGS} onPress={() => onOpen()} /> 
+                <ResponsiveIcon iconName={iconNames.SETTINGS} onPress={() => onPress()} /> 
             </View>             
             <SettingsModal/>
         </View>
-
     );
 };
 
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        isPomodoro: !(state.pomodoro.pomodoroState == pomodoroState.BREAK)
-    }
-  };
-
-  const mapDispatchToProps = (dispatch) => {
-    return {
-        onOpen: () => {
-            dispatch(toggleSettings())
-        },
-        onClose: () => {
+        onPress: () => {
             dispatch(toggleSettings())
         }
     }
-  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(SettingsControl);
+export default connect(null, mapDispatchToProps)(SettingsControl);

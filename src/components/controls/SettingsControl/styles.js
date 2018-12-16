@@ -5,7 +5,7 @@ export default styles = {
     },
     settingsIconContainer: {
         position: 'absolute',
-        top: 0,
+        top: 10,
         bottom: 0,
         alignSelf: 'flex-end',
         opacity: 0.9

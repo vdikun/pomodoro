@@ -28,9 +28,7 @@ const SettingsModal = ({ visible, onClose }) => {
         animationType="slide"
         transparent={true}
         visible={visible}
-        onRequestClose={() => {
-            Alert.alert('Modal has been closed.');
-        }}>
+        onRequestClose={() => onClose()}>
             <View style={modalContent}>
                 <View style={style} >
                     <Text>Welcome to... the settings modal</Text>
@@ -49,11 +47,11 @@ const SettingsModal = ({ visible, onClose }) => {
 
 const mapStateToProps = (state) => {
     return {
-        visible: false
+        visible: state.settingsOpen
     }
   };
 
-  const mapDispatchToProps = (state) => {
+  const mapDispatchToProps = (dispatch) => {
     return {
         onClose: () => {
             dispatch(toggleSettings())
