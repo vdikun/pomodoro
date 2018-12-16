@@ -19,7 +19,7 @@ export const HomeScreen = ({ isPomodoro }) => {
 			<LinearGradient colors={colors} style={ containerStyle }>
 				<TimerView />
 				<PomodoroActionBar />
-				<SettingsControl />
+				<SettingsControl/>
 			</LinearGradient>
 	);
 };

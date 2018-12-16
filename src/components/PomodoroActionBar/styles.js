@@ -1,7 +1,7 @@
 export default styles = {
-    controlStyle: {
+    barStyle: {
         alignSelf: 'stretch',
         flexDirection: 'row',
         justifyContent: 'center'
     }
-  };
+};

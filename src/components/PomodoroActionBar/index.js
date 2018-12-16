@@ -9,11 +9,11 @@ import styles from './styles';
 
 const PomodoroActionBar = ({ theState }) => {
     return (
-        <View style={styles.controlStyle}>
+        <View style={styles.barStyle}>
             <StartControl />
             {(theState == pomodoroState.DISABLED)?
               null :
-              <View style={styles.controlStyle}>
+              <View style={styles.barStyle}>
                 <ToggleControl />
                 <PauseControl />
               </View>}
