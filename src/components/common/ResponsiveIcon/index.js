@@ -11,10 +11,10 @@ export const iconNames = {
     SETTINGS: "cog"
 }
 
-const ControlIcon = ({ iconName, onPress }) => {
+const ControlIcon = ({ iconName, onPress, size=40 }) => {
     return (
         <TouchableOpacity onPress={() => onPress()} style={styles.view}>
-            <Icon name={iconName} size={40} color={Black} />
+            <Icon name={iconName} size={size} color={Black} />
         </TouchableOpacity>
     );
 };
