@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Text, View } from 'react-native';
-import NumericInput from 'react-native-numeric-input';
 import { connect } from 'react-redux';
+import IntervalInput from './IntervalInput';
 import Button from './../../../common/Button';
 import { toggleSettings, saveSettings } from './../../../../redux/actions';
 import styles from './styles';
@@ -26,20 +26,16 @@ class SettingsModal extends Component {
                     <View style={styles.view} >
                         <Text style={styles.header}>Settings</Text>
                         <View style={styles.setting}>
-                            <Text>Work time interval</Text>
-                            <NumericInput
-                                minValue={1}
-                                maxValue={59}
-                                initValue={this.state.workMinutes} 
-                                onChange={value => this.setState({workMinutes: value})}/>
+                            <IntervalInput
+                                title={"Work time interval"} 
+                                initValue={this.state.workMinutes}
+                                onChange={value => this.setState({workMinutes: value})} />
                         </View>
                         <View style={styles.setting}>
-                            <Text>Break time interval</Text>
-                            <NumericInput
-                                minValue={1}
-                                maxValue={59}
-                                initValue={this.state.breakMinutes} 
-                                onChange={value => this.setState({breakMinutes: value})}/>
+                            <IntervalInput
+                                title={"Break time interval"} 
+                                initValue={this.state.breakMinutes}
+                                onChange={value => this.setState({breakMinutes: value})} />
                         </View>
                         <View style={styles.setting}>
                             <Text>Tone played when break starts</Text>
