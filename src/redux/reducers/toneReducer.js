@@ -1,7 +1,7 @@
 import Actions from './../actions/Actions';
-import Sounds from './../../utils/sound';
+import { SoundClips } from './../../utils/sound';
 
-const { ting, blop } = Sounds;
+const { ting, blop } = SoundClips;
 
 export default toneReducer = (state = {breakTone: ting, workTone: blop}, action) => {
     switch (action.type) {
