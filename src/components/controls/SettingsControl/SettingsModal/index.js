@@ -16,7 +16,7 @@ class SettingsModal extends Component {
     }
 
     render () {
-        const { visible, onClose, onSave } = this.props;
+        const { visible, onClose, onSaveSettings } = this.props;
         return (
             <TouchableWithoutFeedback onPress={() => onClose()}>
                 <Modal
@@ -48,7 +48,7 @@ class SettingsModal extends Component {
                             </View>
                             <Button text="Save" onPress={() => {
                                 onClose();
-                                onSave({
+                                onSaveSettings({
                                     workMinutes: this.state.workMinutes,
                                     breakMinutes: this.state.breakMinutes
                                 });
@@ -74,7 +74,7 @@ const mapStateToProps = (state) => {
         onClose: () => {
             dispatch(toggleSettings())
         },
-        onSave: (settings) => {
+        onSaveSettings: (settings) => {
             dispatch(saveSettings(settings))
         }
     }
