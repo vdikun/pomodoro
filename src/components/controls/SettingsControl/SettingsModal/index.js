@@ -43,12 +43,6 @@ class SettingsModal extends Component {
                                     initValue={this.state.breakMinutes}
                                     onChange={value => this.setState({breakMinutes: value})} />
                             </View>
-                            <View style={styles.setting}>
-                                <Text>Tone played when break starts</Text>
-                            </View>
-                            <View style={styles.setting}>
-                                <Text>Tone played when break ends</Text>
-                            </View>
                             <Button text="Save" onPress={() => {
                                 onClose();
                                 onSaveSettings({
