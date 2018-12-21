@@ -36,7 +36,8 @@ export const toggleSettings = () => {
     }
 };
 
-export const saveSettings = (workMinutes, breakMinutes) => {
+export const saveSettings = (settings) => {
+    const { workMinutes, breakMinutes } = settings;
     return {
         type: Actions.SAVE_SETTINGS,
         payload: { workMinutes, breakMinutes }

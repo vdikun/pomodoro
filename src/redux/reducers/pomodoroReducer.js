@@ -1,7 +1,7 @@
 import Actions from './../actions/Actions';
-import pomodoroState, { initialState, toggleWorkOrBreak } from '../state';
+import pomodoroState, { getInitialState, toggleWorkOrBreak } from '../state';
 
-export default pomodoroReducer = (state = initialState, action) => {
+export default pomodoroReducer = (state = getInitialState(), action) => {
     switch (action.type) {
         case Actions.TOGGLE_POMODORO:
             return {
@@ -18,7 +18,7 @@ export default pomodoroReducer = (state = initialState, action) => {
             };
         case Actions.STOP_POMODORO:
             return {
-                ...initialState
+                ...getInitialState()
             };
         case Actions.TOGGLE_TIMER:
             return {
@@ -37,6 +37,11 @@ export default pomodoroReducer = (state = initialState, action) => {
                     ...state,
                     secondsRemaining: secondsRemaining - 1
                 };
+            };
+        case Actions.SAVE_SETTINGS:
+            const { workMinutes, breakMinutes } = action.payload;
+            return {
+                ...getInitialState(workMinutes, breakMinutes)
             };
         default:
             return state;
