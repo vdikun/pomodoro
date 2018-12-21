@@ -67,8 +67,8 @@ class SettingsModal extends Component {
 const mapStateToProps = (state) => {
     return {
         visible: state.settingsOpen,
-        workMinutes: state.pomodoro.workSeconds / 60,
-        breakMinutes: state.pomodoro.breakSeconds / 60
+        workMinutes: state.pomodoro.workMinutes,
+        breakMinutes: state.pomodoro.breakMinutes
     }
   };
 

@@ -13,8 +13,8 @@ export const getInitialState = (workMinutes = DEF_WORK_MINS, breakMinutes = DEF_
     return {
         pomodoroState: pomodoroState.DISABLED,
         secondsRemaining: -1,
-        workSeconds: workMinutes * 60,
-        breakSeconds: breakMinutes * 60,
+        workMinutes: workMinutes,
+        breakMinutes: breakMinutes,
         activeTimer: false,
         showSettings: false
     }
@@ -24,12 +24,12 @@ export const toggleWorkOrBreak = (state) => {
     if (state.pomodoroState == pomodoroState.WORK) {
         return {
             pomodoroState: pomodoroState.BREAK,
-            secondsRemaining: state.breakSeconds
+            secondsRemaining: state.breakMinutes * 60
         }
     } else {
         return {
             pomodoroState: pomodoroState.WORK,
-            secondsRemaining: state.workSeconds
+            secondsRemaining: state.workMinutes * 60
         }  
     }
 }

@@ -13,7 +13,7 @@ export default pomodoroReducer = (state = getInitialState(), action) => {
             return {
                 ...state,
                 pomodoroState: pomodoroState.WORK,
-                secondsRemaining: state.workSeconds,
+                secondsRemaining: state.workMinutes * 60,
                 activeTimer: true
             };
         case Actions.STOP_POMODORO:
