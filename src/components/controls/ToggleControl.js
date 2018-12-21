@@ -9,9 +9,8 @@ const ToggleButton = ({ onPress, theState }) => {
     if (theState == pomodoroState.DISABLED) {
         return null;
     }
-    const iconName = iconNames.TOGGLE; 
     return (
-        <ResponsiveIcon iconName={iconName} onPress={() => onPress()} />
+        <ResponsiveIcon iconName={iconNames.TOGGLE} onPress={() => onPress()} />
     );
 };
 

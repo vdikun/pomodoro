@@ -11,7 +11,7 @@ export const iconNames = {
     SETTINGS: "cog"
 }
 
-const ControlIcon = ({ iconName, onPress, size=40 }) => {
+const ResponsiveIcon = ({ iconName, onPress, size=40 }) => {
     return (
         <TouchableOpacity onPress={() => onPress()} style={styles.view}>
             <Icon name={iconName} size={size} color={Black} />
@@ -19,4 +19,4 @@ const ControlIcon = ({ iconName, onPress, size=40 }) => {
     );
 };
 
-export default ControlIcon;
+export default ResponsiveIcon;
