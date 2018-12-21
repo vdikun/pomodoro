@@ -16,9 +16,12 @@ class SettingsModal extends Component {
     }
 
     render () {
-        const { visible, onClose, onSaveSettings } = this.props;
+        const { breakMinutes, workMinutes, visible, onClose, onSaveSettings } = this.props;
         return (
-            <TouchableWithoutFeedback onPress={() => onClose()}>
+            <TouchableWithoutFeedback onPress={() => {
+                this.setState({workMinutes: workMinutes, breakMinutes: breakMinutes});
+                onClose()
+            }}>
                 <Modal
                 style={{margin: 0}}
                 animationType="slide"
